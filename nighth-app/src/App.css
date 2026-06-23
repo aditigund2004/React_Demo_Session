@@ -1,0 +1,198 @@
+
+/* 
+import React, { useState } from "react";
+
+const EventComp = () => {
+  const [data, setData] = useState({
+    name: "",
+    roll: "",
+    math: "",
+    eng: "",
+    sci: "",
+    total: "",
+  });
+
+  const [stud, setStud] = useState(null);
+
+  const handleSubmit = (e) =>{
+    e.preventDefault()
+    const total = Number(data.math) + Number(data.eng) + Number(data.sci) ;
+    // setData({...data, total})
+    setStud({...data, total});
+    console.log(data)
+  };
+
+  const handleChange =(e) =>{
+    const {name, value} = e.target;
+
+    setData({...data, [name]: value})
+
+
+
+  }
+  const handleReset = (e) =>{
+    setData({
+    name: "",
+    roll: "",
+    math: "",
+    eng: "",
+    sci: "",
+    // total: "",
+  });
+
+  }
+
+  return (
+    <div>
+      <center>
+        <h1>Student Details</h1>
+
+        <form onSubmit={handleSubmit}>
+          Enter name: <input type="text" name = 'name' value = {data.name} onChange={handleChange} required/>
+          <br></br>
+          <br></br>
+          Enter roll: <input type="text" name = 'roll' value = {data.roll} onChange={handleChange} required/>
+          <br></br>
+          <br></br>
+          math: <input type="text" name = 'math' value ={data.math} onChange={handleChange} required/>
+          <br></br>
+          <br></br>
+          english: <input type="text" name = 'eng' value = {data.eng} onChange={handleChange} required/>
+          <br></br>
+          <br></br>
+          science: <input type="text" name = 'sci' value = {data.sci} onChange={handleChange} required/>
+          <br></br>
+          <br></br>
+          
+          <button type="submit">add </button>
+          
+          <button type='button' onClick={handleReset}>Reset</button>
+        </form>
+            {stud && (
+            <div>
+            <p>Name: {stud.name}</p>
+            <p>Roll: {stud.roll}</p>
+            <p>Math: {stud.math}</p>
+
+            <p>English: {stud.eng}</p>
+            <p>Science: {stud.sci}</p>
+            <p>Total: {stud.total}</p>
+
+            </div>
+            )}
+       
+      </center>
+    </div>
+  );
+};
+
+export default EventComp;
+
+
+*/
+
+
+
+/* table  */
+/* 
+import React, { useState } from "react";
+
+const EventComp = () => {
+  const [data, setData] = useState({
+    name: "",
+    roll: "",
+    math: "",
+    eng: "",
+    sci: "",
+    total: "",
+  });
+
+  const [stud, setStud] = useState(null);
+
+  const handleSubmit = (e) =>{
+    e.preventDefault()
+    const total = Number(data.math) + Number(data.eng) + Number(data.sci) ;
+    // setData({...data, total})
+    setStud({...data, total});
+    console.log(data)
+  };
+
+  const handleChange =(e) =>{
+    const {name, value} = e.target;
+    setData({...data, [name]: value})
+  }
+  const handleReset = (e) =>{
+    setData({
+    name: "",
+    roll: "",
+    math: "",
+    eng: "",
+    sci: "",
+    // total: "",
+  });
+
+  }
+
+  return (
+    <div>
+      <center>
+        <h1>Student Details</h1>
+
+        <form onSubmit={handleSubmit}>
+          Enter name: <input type="text" name = 'name' value = {data.name} onChange={handleChange} required/>
+          <br></br>
+          <br></br>
+          Enter roll: <input type="text" name = 'roll' value = {data.roll} onChange={handleChange} required/>
+          <br></br>
+          <br></br>
+          math: <input type="text" name = 'math' value ={data.math} onChange={handleChange} required/>
+          <br></br>
+          <br></br>
+          english: <input type="text" name = 'eng' value = {data.eng} onChange={handleChange} required/>
+          <br></br>
+          <br></br>
+          science: <input type="text" name = 'sci' value = {data.sci} onChange={handleChange} required/>
+          <br></br>
+          <br></br>
+          
+          <button type="submit">add </button>
+          
+          <button type='button' onClick={handleReset}>Reset</button>
+        </form>
+        <br></br><br></br>
+           
+
+            <table border = '2'>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Roll</th>
+                        <th>Math</th>
+                        <th>English</th>
+                        <th>Science</th>
+                        <th>Total</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr key = {stud.roll}>
+                        <td>{stud.name}</td>
+                        <td>{stud.roll}</td>
+                        <td>{stud.math}</td>
+                        <td>{stud.eng}</td>
+                        <td>{stud.sci}</td>
+                        <td>{stud.total}</td>
+
+                    </tr>
+                </tbody>
+
+
+            </table>
+       
+      </center>
+    </div>
+  );
+};
+export default EventComp;
+
+*/
