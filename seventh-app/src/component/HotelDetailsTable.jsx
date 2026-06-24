@@ -1,13 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-const HotelDetailsForm = ({collectInfo, deletedId}) => {
-    const HandleDelet = (bookingid)=>{
-        console.log("delete id", bookingid)
-        // props function pass parameter or id which we want to delete
-        deletedId(bookingid)
-
-
-    }
+const HotelDetailsTable = ({collectInfo, deletedId}) => {
 
   return (
     <div>
@@ -28,7 +21,7 @@ const HotelDetailsForm = ({collectInfo, deletedId}) => {
             </thead>
             <tbody>
                 {
-                    collectInfo.map((d) => (
+                    collectInfo?.map((d) => (
                         <tr key={d.bookingid}>
                             <td>{d.bookingid}</td>
                             <td>{d.name}</td>
@@ -40,7 +33,7 @@ const HotelDetailsForm = ({collectInfo, deletedId}) => {
                             <td>{d.room}</td>
                             <td>{d.desc}</td>
                             <td>
-                                <button type='submit' onClick={() => HandleDelet(d.bookingid)}>Delete</button>
+                                {/* <button type='submit' onClick={() => HandleDelet(d.bookingid)}>Delete</button> */}
                             </td>
                         </tr>
                     ))
@@ -52,4 +45,5 @@ const HotelDetailsForm = ({collectInfo, deletedId}) => {
   )
 }
 
-export default HotelDetailsForm
+export default HotelDetailsTable
+

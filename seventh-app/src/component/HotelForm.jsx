@@ -9,17 +9,22 @@ const HotelForm = ({info}) => {
         console.log(data)
         // clear from
         setData({bookingid: '', name: '', email : '', mob: '', noadult: '', noinfants: '', totalp: '', room: '', desc:''})
-
-        info(data) // Send data to App
-        
         // total of adults and infants
+        // pass to props
+        // create varible assign state data to that variable
+
+        // const tt = Number(data.noadult) + Number(data.noinfants)
+        // // console.log(tt)
+        // const totalperson ={...data, totalp:tt}
+        // info(tt)
         const total = Number(data.noadult) + Number(data.noinfants)
 
         const totalperson = {...data, totalp: total}
         // pass to props
         info(totalperson)
+        info(data)
+       
 
-        // create varible assign state data to that variable
     }
 
     const handleInput = (e) => {
