@@ -6,9 +6,43 @@ const App = () => {
 
   const [empData, setEmpData] = useState([])
 
+  const [update, setUpdate] = useState(null)
+
+  // const sendData = (dt) => {
+  //   setEmpData([...empData, dt])
+  // }
+
+  // prev means: the previous (latest) state value of empData
+
   const sendData = (dt) => {
-    setEmpData([...empData, dt])
+  setEmpData((prev) => {
+    const exists = prev.find(emp => emp.id === dt.id)
+
+    if (exists) {
+      // UPDATE
+      return prev.map(emp =>
+        emp.id === dt.id ? dt : emp
+      )
+    } else {
+      // ADD
+      return [...prev, dt]
+    }
+  })
+
+  setUpdate(null) // reset edit mode
+}
+
+
+
+  const deleteEmployee = (id)=>{
+    setEmpData(empData.filter(emp => emp.id !== id))
   }
+
+
+  const handleUpdatePa = (emp) => {
+    setUpdate(emp)
+  }
+  
 
   return (
     <div>
@@ -17,12 +51,23 @@ const App = () => {
         {/* function  -> sendData adding the data inside it */}
         {/* parent to child as a function  */}
         {/* parent create props pass to app and then app create function  */}
-        <EmployeeFrom sendDataToParent = {sendData}/>
+
+        {/* To send data up → we use function */}
+        {/* Child (EmployeeFrom) wants to send data UP to parent (App) */}
+        <EmployeeFrom sendDataToParent = {sendData} up = {update}/>
+
+
+        {/* Why function is required? */}
+        {/* Child CANNOT directly change parent state */}
+        {/* 
+        Only parent can update its own state
+        So parent gives child a "tool" (function) to request update.
+         */}
 
         {/* child calss function (data) parent receive data */}
         {/* pass state variable name and also functon  */}
         {/* create props pass to child to in that props name pass state vriable */}
-        <EmployeeDetails childToParent = {empData}/>
+        <EmployeeDetails childToParent = {empData} onDelete = {deleteEmployee} onUpdate = {handleUpdatePa}/>
       </center>
       
     </div>

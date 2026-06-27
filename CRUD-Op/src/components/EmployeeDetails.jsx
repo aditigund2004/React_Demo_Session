@@ -1,8 +1,17 @@
 import React, { useState } from 'react'
 
-const EmployeeDetails = ({childToParent}) => {
+const EmployeeDetails = ({childToParent, onDelete, onUpdate}) => {
 
-    const[del, setDel] = useState(0)
+
+    const handleDelete = (id) =>{
+        onDelete(id)
+
+    }
+
+    const handleUpdate = (emp)=>{
+        onUpdate(emp)
+
+    }
 
   return (
     <div>
@@ -26,7 +35,8 @@ const EmployeeDetails = ({childToParent}) => {
                         <td>{ed.salary}</td>
                         <td>{ed.dept}</td>
                         <td>
-                            <button onClick={() => setDel(del)}>Delete</button>
+                            <button onClick={() => handleDelete(ed.id)}>Delete</button>{" "}
+                            <button onClick={() => handleUpdate(ed)}>Update</button>
                         </td>
                     </tr>
                     ))}
