@@ -16,7 +16,6 @@ const EmployeeFrom = ({sendDataToParent, up}) => {
         }
     }
 
-
     useEffect( ()=>{
         if(up){
             setData(up)
@@ -47,3 +46,12 @@ const EmployeeFrom = ({sendDataToParent, up}) => {
 }
 
 export default EmployeeFrom
+
+
+
+
+
+
+
+
+
