@@ -35,6 +35,8 @@ export const ShowAllEmployees = () => {
     return employees
 };
 
+
+// export → Makes the function available to other files/modules.
 export const deletebyId = (id) =>{
   // Creates a new array excluding employee 102.
   const uplist = employees.filter((item) => item.id!==id)

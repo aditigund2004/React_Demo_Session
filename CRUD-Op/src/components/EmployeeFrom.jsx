@@ -6,7 +6,7 @@ const EmployeeFrom = ({sendDataToParent, up}) => {
     const handleForm = (e) => {
         e.preventDefault()
         // props name then state variable name
-        // call -> This sends form data back to App
+        // call -> This sends form data back to App     
         sendDataToParent(data)
         setData({id: "", name: "", salary: "", dept: ""})
 
@@ -46,12 +46,3 @@ const EmployeeFrom = ({sendDataToParent, up}) => {
 }
 
 export default EmployeeFrom
-
-
-
-
-
-
-
-
-

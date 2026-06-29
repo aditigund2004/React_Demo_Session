@@ -1,16 +1,11 @@
 import React, { useState } from 'react'
-
 const EmployeeDetails = ({childToParent, onDelete, onUpdate}) => {
-
-
     const handleDelete = (id) =>{
         onDelete(id)
-
     }
 
-    const handleUpdate = (emp)=>{
-        onUpdate(emp)
-
+    const handleUpdate = (e)=>{
+        onUpdate(e)
     }
 
   return (
@@ -25,7 +20,6 @@ const EmployeeDetails = ({childToParent, onDelete, onUpdate}) => {
                     <th>Action</th>
                 </tr>
             </thead>
-            
                 <tbody>
                     {
                 childToParent?.map( (ed) => (
@@ -41,11 +35,8 @@ const EmployeeDetails = ({childToParent, onDelete, onUpdate}) => {
                     </tr>
                     ))}
                 </tbody>
-            
         </table>
-      
     </div>
   )
 }
-
 export default EmployeeDetails

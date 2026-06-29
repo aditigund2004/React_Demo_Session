@@ -16,12 +16,12 @@ const App = () => {
 
   const sendData = (dt) => {
   setEmpData((prev) => {
-    const exists = prev.find(emp => emp.id === dt.id)
+    const exists = prev.find(e => e.id === dt.id)
 
     if (exists) {
       // UPDATE
-      return prev.map(emp =>
-        emp.id === dt.id ? dt : emp
+      return prev.map(e =>
+        e.id === dt.id ? dt : e
       )
     } else {
       // ADD
@@ -39,8 +39,8 @@ const App = () => {
   }
 
 
-  const handleUpdatePa = (emp) => {
-    setUpdate(emp)
+  const handleUpdatePa = (e) => {
+    setUpdate(e)
   }
   
 
