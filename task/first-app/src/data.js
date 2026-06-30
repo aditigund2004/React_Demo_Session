@@ -36,11 +36,11 @@ let users = [
     },
 ]
 
-// send to table data
-export const getUsers = () => {
+
+export const addUser =() =>{
     return users
 }
 
-export const addUserToList = (newUser) => {
-  users = [...users, newUser]
+export const addUserToList = (newlist) => {
+    users = [...users, newlist]
 }
