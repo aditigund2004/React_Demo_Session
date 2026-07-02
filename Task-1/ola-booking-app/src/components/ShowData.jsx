@@ -1,32 +1,51 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { deleteAPI, showAllAPI } from '../data';
 
-const ShowData = () => {
-  
-// const [userDetail, setUserDetail] = useState({userId: '', name: '', phone: '', email: '', city : '', rating:''})
-  
+const ShowData = ({refresh, reload}) => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    setData(showAllAPI());
+  }, [refresh]);
+
+  const handleDelete = (id) => {
+    deleteAPI(id);
+    reload();
+  };
+
   return (
     <div>
-      <table>
+      <table border='2'>
         <thead>
           <tr>
             <th>UserId</th>
             <th>Name</th>
-            <th>phone</th>
-            <th>Email</th>
-            <th>City</th>
-            <th>Ride</th>
+            <th>pickup</th>
+            <th>drop</th>
+            <th>cabType</th>
+            <th>paymentMode</th>
+            <th>fare</th>
+            <th>date</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
           {
-            userInfo.map ( (uinfo) => (
-            <tr>
-              <td>{uinfo.userId}</td>
-              <td>{uinfo.name}</td>
-              <td>{uinfo.phone}</td>
-              <td>{uinfo.email}</td>
-              <td>{uinfo.city}</td>
-              <td>{uinfo.ride}</td>
+            data?.map ( (item) => (
+            <tr key={item.userId || Math.random()}>
+              <td>{item.userId}</td>
+              <td>{item.name}</td>
+              <td>{item.pickup}</td>
+              <td>{item.drop}</td>
+              <td>{item.cabType}</td>
+              <td>{item.paymentMode}</td>
+              <td>{item.fare}</td>
+              <td>{item.date}</td>
+              <td>
+                <button onClick={() => handleDelete(item.userId)}>
+                  Delete
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>

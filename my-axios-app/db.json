@@ -1,0 +1,52 @@
+{
+  "employees": [
+    {
+      "empid": 1,
+      "name": "John Doe",
+      "role": "Software Engineer",
+      "salary": 60000,
+      "id": "Qjf4bpQO-zk"
+    },
+    {
+      "empid": 2,
+      "name": "Jane Smith",
+      "role": "Project Manager",
+      "salary": 75000,
+      "id": "3tkrM_lhGz0"
+    },
+    {
+      "empid": 3,
+      "name": "Michael Johnson",
+      "role": "UI/UX Designer",
+      "salary": 55000,
+      "id": "_BfHoR6L_LE"
+    },
+    {
+      "empid": 4,
+      "name": "Emily Davis",
+      "role": "QA Engineer",
+      "salary": 50000,
+      "id": "b9UiSlgL2cc"
+    },
+    {
+      "id": "2Qh_e60Q1VM",
+      "name": "David Wilson",
+      "role": "DevOps Engineer",
+      "salary": 70000
+    },
+    {
+      "id": "dd_tbb64iyk",
+      "name": "David Wilson",
+      "role": "DevOps Engineer",
+      "salary": 800000
+    },
+    {
+      "empid": "5",
+      "name": "Ram",
+      "role": "Dev",
+      "salary": "900000",
+      "id": "Cyl7VCFOCpc"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
