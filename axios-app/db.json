@@ -18,22 +18,9 @@
       "empid": 3,
       "name": "Michael Johnson",
       "role": "UI/UX Designer",
-      "salary": 55000,
+      "salary": "80000",
       "id": "_BfHoR6L_LE"
-    },
-    {
-      "empid": 4,
-      "name": "Emily Davis",
-      "role": "QA Engineer",
-      "salary": 50000,
-      "id": "b9UiSlgL2cc"
-    },
-    {
-      "empid": "5",
-      "name": "Ram Yadav",
-      "role": "Developer",
-      "salary": "90000",
-      "id": "jtIy9aDLvTQ"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

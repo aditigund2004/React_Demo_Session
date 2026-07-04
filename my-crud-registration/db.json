@@ -1,0 +1,15 @@
+{
+  "Students": [
+    {
+      "eid": "1",
+      "uname": "ram",
+      "id": "WZ6ysWNzZKA"
+    },
+    {
+      "eid": "2",
+      "uname": "as",
+      "id": "KQTr5LSkNhA"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
