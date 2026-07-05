@@ -3,12 +3,7 @@
     {
       "eid": "1",
       "uname": "ram",
-      "id": "WZ6ysWNzZKA"
-    },
-    {
-      "eid": "2",
-      "uname": "as",
-      "id": "KQTr5LSkNhA"
+      "id": "qUy0wEsNZv8"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
