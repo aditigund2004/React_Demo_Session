@@ -1,0 +1,18 @@
+{
+    "users" : [
+        {
+            "name":"Ram",
+            "role":"admin",
+            "email":"ram@gmail.com",
+            "password": "1234"
+        },
+        {
+            "name":"sham",
+            "role":"user",
+            "email":"sham@gmail.com",
+            "password": "1234"
+        }
+
+    ]
+
+}

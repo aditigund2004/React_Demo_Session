@@ -2,8 +2,69 @@
   "Students": [
     {
       "eid": "1",
+      "uname": "Rahul Sharma",
+      "age": 25,
+      "mobile": "9876543210",
+      "location": "Pune",
+      "highestQualification": "B.Tech",
+      "PassoutYear": 2022,
+      "college": "MIT ",
+      "id": "q1sCxp-0m2Q"
+    },
+    {
+      "eid": "2",
+      "uname": "Priya Singh",
+      "age": 24,
+      "mobile": "9876543211",
+      "location": "Mumbai",
+      "highestQualification": "MCA",
+      "PassoutYear": 2023,
+      "college": "VJTI Mumbai",
+      "id": "_2iw7ze7UY0"
+    },
+    {
+      "eid": "3",
+      "uname": "Amit Kumar",
+      "age": 26,
+      "mobile": "9876543212",
+      "location": "Hyderabad",
+      "highestQualification": "B.Sc",
+      "PassoutYear": 2021,
+      "college": "Osmania University",
+      "id": "blKrw3ka6ew"
+    },
+    {
+      "eid": "4",
+      "uname": "Sneha Reddy",
+      "age": 23,
+      "mobile": "9876543213",
+      "location": "Bengaluru",
+      "highestQualification": "B.E",
+      "PassoutYear": 2024,
+      "college": "RV College of Engineering",
+      "id": "MC1b_kDB_jo"
+    },
+    {
+      "eid": "5",
+      "uname": "Arjun Patel",
+      "age": 27,
+      "mobile": "9876543214",
+      "location": "Ahmedabad",
+      "highestQualification": "MBA",
+      "PassoutYear": 2020,
+      "college": "IIM Ahmedabad",
+      "id": "_07crEmVNag"
+    },
+    {
+      "eid": "6",
       "uname": "ram",
-      "id": "qUy0wEsNZv8"
+      "age": "22",
+      "mobile": "2323232323",
+      "location": "pune",
+      "highestQualification": "mca",
+      "PassoutYear": "2026",
+      "college": "solapur",
+      "id": "GO5UVllSaO0"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
