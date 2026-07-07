@@ -1,12 +1,14 @@
 {
     "users" : [
         {
+            "id": 1,
             "name":"Ram",
             "role":"admin",
             "email":"ram@gmail.com",
             "password": "1234"
         },
         {
+             "id": 2,
             "name":"sham",
             "role":"user",
             "email":"sham@gmail.com",

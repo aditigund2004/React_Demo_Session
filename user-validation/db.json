@@ -1,0 +1,28 @@
+{
+    "users" : [
+        {
+            "name":"ram",
+            "email":"ram@gmail.com",
+            "password": "12345",
+            "role":"faculty"
+        },
+        {
+            "name":"sham",
+            "email":"sham@gmail.com",
+            "password": "12345",
+            "role":"admin"
+        }
+    ],
+    "student":[
+        {
+            "prn":"12345",
+            "name":"radha",
+            "email":"radha@gmail.com"
+        },
+        {
+            "prn":"847474",
+            "name":"riya",
+            "email":"riya@gmail.com"
+        }
+    ]
+}

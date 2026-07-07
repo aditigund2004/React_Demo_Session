@@ -1,5 +1,5 @@
 {
-  "name": "my-login-app",
+  "name": "user-validation",
   "private": true,
   "version": "0.0.0",
   "type": "module",
