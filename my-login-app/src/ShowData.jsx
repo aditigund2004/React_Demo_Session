@@ -1,35 +1,23 @@
 import React, { useEffect, useState } from 'react'
-import { api } from '../service'
+import { api } from './service'
 
 const ShowData = () => {
     const [alluser, setAllUser] = useState( [])
 
-    // if(!receiveTo) return null;
-//     useEffect(() => {
-//     api.get("/users").then((res) => setAllUser(res.data));
-//   }, []);
+    const loadAllUser = ()=>{
+        api.get('/users')
+        .then( (res)=>{
+            console.log(res.data)
+            setAllUser(res.data)
+        })
+        .catch( (err) =>{
+            console.log(err)
+        })
+    }
 
- useEffect(() => {
-    api.get("/users").then((res) => {
-      setAllUser(res.data);
-    });
-  }, []);
-
-
-    // const loadAllUser = ()=>{
-    //     api.get('/users')
-    //     .then( (res)=>{
-    //         console.log(res.data)
-    //         setAllUser(res.data)
-    //     })
-    //     .catch( (err) =>{
-    //         console.log(err)
-    //     })
-    // }
-
-    // useEffect( () =>{
-    //     loadAllUser();
-    // } , [receiveTo])
+    useEffect( () =>{
+        loadAllUser();
+    } , [])
   return (
     <div>
         <center>

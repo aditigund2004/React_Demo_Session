@@ -1,28 +1,45 @@
 {
-    "users" : [
-        {
-            "name":"ram",
-            "email":"ram@gmail.com",
-            "password": "12345",
-            "role":"faculty"
-        },
-        {
-            "name":"sham",
-            "email":"sham@gmail.com",
-            "password": "12345",
-            "role":"admin"
-        }
-    ],
-    "student":[
-        {
-            "prn":"12345",
-            "name":"radha",
-            "email":"radha@gmail.com"
-        },
-        {
-            "prn":"847474",
-            "name":"riya",
-            "email":"riya@gmail.com"
-        }
-    ]
+  "users": [
+    {
+      "name": "ram",
+      "email": "ram@gmail.com",
+      "password": "12345",
+      "role": "faculty",
+      "id": "SzNsRuwfOvE"
+    },
+    {
+      "name": "sham",
+      "email": "sham@gmail.com",
+      "password": "12345",
+      "role": "admin",
+      "id": "iEwbDTBUcgM"
+    }
+  ],
+  "student": [
+    {
+      "prn": "12345",
+      "name": "radha",
+      "email": "radha@gmail.com",
+      "m1": "90",
+      "m2": "90",
+      "m3": "90",
+      "m4": "90",
+      "total": "90",
+      "percentag": "80",
+      "id": "PWts1HQODlc"
+    },
+    {
+      "prn": "12345",
+      "name": "radha",
+      "email": "radha@gmail.com",
+      "m1": "90",
+      "m2": "90",
+      "m3": "90",
+      "m4": "90",
+      "total": "90",
+      "percentag": "80",
+      "id": "HqV6H-HiCLE"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
