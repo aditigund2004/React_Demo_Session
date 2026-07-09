@@ -1,0 +1,17 @@
+{
+  "bank": [
+    {
+      "cname": "asas",
+      "ano": "1234"
+    },
+    {
+      "cname": "rr",
+     "ano": "1234"
+    },
+    {
+      "cname": "asas",
+      "ano": "1234"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

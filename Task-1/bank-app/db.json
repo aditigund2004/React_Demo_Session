@@ -1,0 +1,17 @@
+{
+  "account": [
+    {
+      "cname": "ram",
+      "id": "J6WiOtI5-zY"
+    },
+    {
+      "cname": "sham",
+      "id": "yPnRjSBdZao"
+    },
+    {
+      "cname": "radha rani",
+      "id": "Q2Bmp-fp9Ds"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
