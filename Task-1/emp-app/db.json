@@ -1,0 +1,51 @@
+{
+  "users": [
+    {
+      "name": "ram",
+      "role": "Admin",
+      "password": "123",
+      "id": "387H1rnHfQ8"
+    },
+    {
+      "name": "radha",
+      "role": "hr",
+      "password": "123",
+      "id": "Hfzze2wjFMQ"
+    },
+    {
+      "name": "aaa",
+      "email": "asas",
+      "password": "123",
+      "role": "admin",
+      "id": "6XbeLYdnFKc"
+    },
+    {
+      "name": "ww",
+      "email": "asas",
+      "password": "123",
+      "role": "admin",
+      "id": "Q9i1DjUvyNw"
+    },
+    {
+      "name": "as",
+      "email": "as",
+      "password": "as",
+      "role": "as",
+      "id": "bFGtwj-j358"
+    },
+    {
+      "name": "as",
+      "email": "as",
+      "password": "s",
+      "role": "as",
+      "id": "Kon5gFFZa80"
+    }
+  ],
+  "emp": [
+    {
+      "name": "sham",
+      "id": "EKth2olaXnA"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
