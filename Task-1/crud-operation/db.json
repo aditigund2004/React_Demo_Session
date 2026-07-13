@@ -9,13 +9,10 @@
     },
     {
       "name": "sham",
-      "email": "sham@gmail.com",
-      "role": "admin",
-      "id": "4PnALKlyDDg"
-    },
-    {
-      "name": "as",
-      "id": "Pvbvsz7Ea4U"
+      "email": "shham@gmail.com",
+      "role": "student",
+      "password": "123",
+      "id": "hFwfBApfZqY"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
