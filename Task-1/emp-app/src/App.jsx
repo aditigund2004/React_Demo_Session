@@ -6,7 +6,7 @@ const App = () => {
 
   const [from, setForm] = useState({name : "", email: "", password: "" , role: "",})
 
-  const [show, setShow] = useState(null)
+  const [show, setShow] = useState(false)
 
   const handleSubmit = async(e)=>{
     e.preventDefault()
@@ -15,7 +15,7 @@ const App = () => {
 
     await api.post(`users`,from)
 
-    setShow(true)
+    // setShow(true)
    
 
     setForm({name : "", email: "", password: "" , role: "",})
@@ -41,17 +41,17 @@ const App = () => {
           password : <input type="text" name = 'password' value = {from.password} onChange={handleInput} required /><br></br> <br></br>
           role : <input type="text" name = 'role' value = {from.role} onChange={handleInput} required /><br></br> <br></br>
 
-          <button>Add</button>
+          <button>Register</button><br></br><br></br>
         </form>
-        </>
 
+        <button onClick={() => setShow(true)}> Login </button>
+        </>
         ) : (
-        <Login/>
+        <button back= { ()=> setShow(false)}/>
 
        )}
       </center>
-
-      {/* <Data/> */}
+      
     </div>
   )
 }

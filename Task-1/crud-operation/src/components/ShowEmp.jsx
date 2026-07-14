@@ -1,26 +1,36 @@
 import React, { useEffect, useState } from 'react'
 import { api } from '../service'
 
-function ShowEmp({receive}) {
+function ShowEmp({ refdata , updateData}) {
 
     const [user, setUser]= useState([])
+
+    // const [update, setUpdate] = useState([])
+
+
 
     const loadData =()=>{
         api.get(`users`)
         .then( (res)=>{
             setUser(res.data)
+
         })
     }
 
     useEffect( ()=>{
         loadData();
-    },[receive])
+    },[refdata])
 
     const handleDelete =(id)=>{
         api.delete(`users/${id}`)
         .then( (res) =>{
             loadData();
         })
+    }
+
+    const handleUpdate =(up)=>{
+        updateData(up)
+
     }
   return (
     <div>
@@ -45,6 +55,9 @@ function ShowEmp({receive}) {
                                 <td>{u.password}</td>
                                 <td>
                                     <button onClick={() =>handleDelete(u.id)}>Delete</button>
+                                </td>
+                                <td> 
+                                    <button onClick={()=> handleUpdate(u)}>Update</button>
                                 </td>
                             </tr>
                         ))

@@ -3,18 +3,23 @@ import ShowEmp from './components/ShowEmp'
 import AddEmp from './components/AddEmp'
 
 const App = () => {
-  const[data, setData] = useState( [])
-  const func =(dt)=>[
-    setData(dt)
-  ]
+  const [ref, setRef] = useState(0)
+
+  const[update, setUpdate]=useState(null)
+
+  const updatedFun =(up)=>{
+    setUpdate(up)
+
+  }
+
   return (
     <div>
       <center>
         <h3>CRUD OPERATION</h3>
         {/* <ShowData/> */}
         {/* <Data/> */}
-        <AddEmp sendData = {func}/>
-        <ShowEmp receive = {data}/>
+        <AddEmp  refdata={ref} setRef = {setRef} updateRec = {update}/>
+        <ShowEmp refdata={ref} updateData ={updatedFun}/>
       </center>
       
     </div>

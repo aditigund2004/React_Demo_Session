@@ -13,6 +13,20 @@
       "role": "student",
       "password": "123",
       "id": "hFwfBApfZqY"
+    },
+    {
+      "name": "radha",
+      "email": "radha@gmail.com",
+      "role": "student",
+      "password": "1234",
+      "id": "9GX9CMRJVK8"
+    },
+    {
+      "name": "sham",
+      "email": "shham@gmail.com",
+      "role": "student",
+      "password": "12345",
+      "id": "Bw3q59rNG_M"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

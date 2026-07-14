@@ -1,0 +1,27 @@
+{
+  "users": [
+    {
+      "name": "ram",
+      "email": "ram@gmail.com",
+      "password": "123",
+      "role": "manager",
+      "id": "Sdzx_ouA5Rs"
+    },
+    {
+      "name": "radha",
+      "email": "radha@gmail.com",
+      "password": "123",
+      "role": "staff",
+      "id": "wF45s9CEaws"
+    }
+  ],
+  "products": [
+    {
+      "pid": "p1",
+      "name": "mobile",
+      "category": "hardware",
+      "price": "40000",
+      "quntity": "1"
+    }
+  ]
+}

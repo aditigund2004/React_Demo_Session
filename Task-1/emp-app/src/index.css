@@ -1,0 +1,8 @@
+body{
+    background-color: antiquewhite;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    animation: name duration timing-function delay iteration-count direction fill-mode; 
+    font-size: medium;
+    font-variant: small-caps;
+}

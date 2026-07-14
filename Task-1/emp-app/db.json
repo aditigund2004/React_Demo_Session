@@ -2,49 +2,61 @@
   "users": [
     {
       "name": "ram",
-      "role": "Admin",
+      "email": "ram@gmail.com",
+      "role": "admin",
       "password": "123",
       "id": "387H1rnHfQ8"
     },
     {
       "name": "radha",
-      "role": "hr",
+      "email": "radha@gmail.com",
+      "role": "user",
       "password": "123",
       "id": "Hfzze2wjFMQ"
     },
     {
-      "name": "aaa",
-      "email": "asas",
+      "name": "sham",
+      "email": "sham@gmail.com",
       "password": "123",
       "role": "admin",
-      "id": "6XbeLYdnFKc"
-    },
-    {
-      "name": "ww",
-      "email": "asas",
-      "password": "123",
-      "role": "admin",
-      "id": "Q9i1DjUvyNw"
-    },
-    {
-      "name": "as",
-      "email": "as",
-      "password": "as",
-      "role": "as",
-      "id": "bFGtwj-j358"
-    },
-    {
-      "name": "as",
-      "email": "as",
-      "password": "s",
-      "role": "as",
-      "id": "Kon5gFFZa80"
+      "id": "s_wzKU-Zr78"
     }
   ],
   "emp": [
     {
-      "name": "sham",
-      "id": "EKth2olaXnA"
+      "empName": "sham",
+      "Department": "it",
+      "salary": "200000",
+      "email": "sham@gmail.com",
+      "id": "NDESC3-vAic"
+    },
+    {
+      "empName": "ram",
+      "Department": "it",
+      "salary": "90000",
+      "email": "ram@gmail.com",
+      "id": "C00-1KQ1WZM"
+    },
+    {
+      "empName": "ashuuuuu",
+      "Department": "it",
+      "salary": "90000",
+      "email": "ashuu@gmail.com",
+      "id": "wbiVNMjuBi8"
+    },
+    {
+      "empName": "rani",
+      "Department": "it",
+      "salary": "900000",
+      "email": "rani@gmail.com",
+      "id": "2pimM1eNHtQ"
+    },
+    {
+      "empName": "mrunal",
+      "Department": "it",
+      "salary": "900000",
+      "email": "mrunal@gmail.com",
+      "id": "n6Lvw7zWpps"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
