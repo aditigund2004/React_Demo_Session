@@ -1,12 +1,19 @@
 import axios from 'axios'
-import React from 'react'
+import React, { useState } from 'react'
 import ShowTable from './ShowTable'
+import ShowEmp from './ShowEmp'
 
 const App = () => {
 
+  const [add, setAdd] = useState(null)
+  const [sendUpdate, setSendUpdate] = useState(null)
+
   return (
     <div>
-      <ShowTable/>
+
+      <ShowEmp  add = {(e)=>  setAdd(add+e)} receiveUpdate={sendUpdate}/>
+
+      <ShowTable refresh = {add} handleUpdate= {(e) => setSendUpdate(e)}/>
       
     </div>
   )

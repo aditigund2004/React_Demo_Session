@@ -1,16 +1,26 @@
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { addEmployee, updateEmployee } from './services'
 
-const ShowEmp = () => {
+const ShowEmp = ({add, receiveUpdate}) => {
     const [data, setData] = useState({id: "", name: "", role: "", salary:""})
+    
+    useEffect ( () =>{
+        if(receiveUpdate){
+            setData(receiveUpdate)
+        }
+    }, [receiveUpdate])
 
-    const handleSubmit = (e)=>{
+    const handleSubmit = async(e)=>{
         e.preventDefault()
 
-        axios.post(`employee`, data)
-        .then( (res) =>{
-            
-        })
+        if(receiveUpdate){
+            const res = await updateEmployee(receiveUpdate.id, data)
+        }else{
+        const res = await addEmployee(data)        
+        }
+        add(1)
+        setData({id: "", name: "", role: "", salary:""})
     }
 
     const handleInput =(e)=>{
@@ -21,14 +31,16 @@ const ShowEmp = () => {
   return (
     <div>
         <center>
-            <h2>Add Employee Data</h2>
+            
+            <h2>{receiveUpdate ? "Update Employee Data" : "Add Employee Data"}</h2>
+
             <form onSubmit={handleSubmit}>
                 id : <input type="text" name="id" value={data.id} onChange={handleInput} required/> <br></br> <br></br>
                 name : <input type="text" name="name" value={data.name} onChange={handleInput} required/> <br></br> <br></br>
                 role : <input type="text" name="role" value={data.role} onChange={handleInput} required/> <br></br> <br></br>
-                id : <input type="text" name="salary" value={data.salary} onChange={handleInput} required/> <br></br> <br></br>
+                salary : <input type="text" name="salary" value={data.salary} onChange={handleInput} required/> <br></br> <br></br>
 
-                <button>Add Employee</button>
+                <button>{receiveUpdate ? "Update Employee " : "Add Employee"}</button>
 
             </form>
         </center>

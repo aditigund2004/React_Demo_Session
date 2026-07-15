@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
-import { showAllEmployee } from './services'
+import { deleteEmployee, showAllEmployee } from './services'
 
-const ShowTable = () => {
+const ShowTable = ({refresh, handleUpdate}) => {
     const [emp , setEmp] = useState([])
 
     const loadEmp = ()=>{
         showAllEmployee().then( (res) =>{
             setEmp(res.data)
+            console.log(res.data)
         })
         .catch( (err) =>{
             console.log(err)
@@ -14,7 +15,13 @@ const ShowTable = () => {
     }
     useEffect( ()=>{
         loadEmp()
-    }, [])
+    }, [refresh])
+
+    const handleDelete = async (id)=>{
+        const res = await deleteEmployee(id)
+
+        loadEmp()
+    }
   return (
     <div>
         <center>
@@ -26,6 +33,8 @@ const ShowTable = () => {
                     <th>name</th>
                     <th>role</th>
                     <th>salary</th>
+                    <th>Action</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>          
@@ -36,6 +45,12 @@ const ShowTable = () => {
                         <td>{u.name}</td>
                         <td>{u.role}</td>
                         <td>{u.salary}</td>
+                        <td>
+                            <button onClick={ () => handleDelete(u.id)}>Delete</button>
+                        </td>
+                        <td>
+                            <button onClick={()=> handleUpdate(u)}>Update</button>
+                        </td>
                     </tr>
                 ))
             }
