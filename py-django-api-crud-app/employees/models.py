@@ -11,4 +11,7 @@ class Employee(models.Model):
 
     def __str__(self):
         return self.name
+    
+    # Aditi
+    # instead of: -> Employee object(1)
  

@@ -1,9 +1,11 @@
 import React from 'react'
+import electronics from '../assets/electronics.jpg'
 
 const Electronics = () => {
   return (
     <div>
-        <h3>Electronics</h3>
+       
+       <img src={electronics} alt="" />
        
     </div>
   )

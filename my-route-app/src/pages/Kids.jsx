@@ -1,9 +1,11 @@
 import React from 'react'
+import kids from '../assets/kids.jpg'
 
 const Kids = () => {
   return (
     <div>
-        <h3>Kids Section</h3>
+
+      <img src={kids} alt="" />
       
     </div>
   )

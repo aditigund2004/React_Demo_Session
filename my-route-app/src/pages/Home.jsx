@@ -3,7 +3,7 @@ import home from '../assets/home.jpg'
 const Home = () => {
   return (
     <div>
-        <h3>Home Page</h3>
+        <h3>Home Page </h3>
         <img src={home} alt="" />
 
       

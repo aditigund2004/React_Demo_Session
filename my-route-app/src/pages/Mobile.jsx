@@ -1,9 +1,11 @@
 import React from 'react'
-
+import mobile from '../assets/mobile.jpg'
 const Mobile = () => {
   return (
     <div>
-        <h3>Mobile </h3>
+      
+
+        <img src={mobile} alt="" />
       
     </div>
   )

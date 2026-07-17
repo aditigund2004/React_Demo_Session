@@ -55,3 +55,56 @@ Response example:
   }
 ]
 Verified: tests pass, Django check passes, and live bulk-create returned 201 Created.
+
+
+
+
+
+
+
+---------------------------------------------------------------
+
+'corsheaders',
+
+Allows React frontend to call Django APIs.
+Example:
+
+React -> localhost:3000
+
+Django -> localhost:8000
+
+
+
+
+
+
+from rest_framework.routers import DefaultRouter
+
+Automatically creates CRUD URLs.
+
+
+
+router.register(
+    r'employees',
+    EmployeeViewSet,
+    basename='employee'
+)
+
+Automatically generates:
+
+GET      /employees/
+POST     /employees/
+GET      /employees/1/
+PUT      /employees/1/
+DELETE   /employees/1/
+
+
+
+
+For a CRUD application, the essential files are:
+
+models.py
+serializers.py
+views.py
+urls.py
+settings.py

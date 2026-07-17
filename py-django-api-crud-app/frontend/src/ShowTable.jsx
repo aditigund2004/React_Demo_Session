@@ -11,6 +11,9 @@ const ShowTable = ({refresh, handleUpdate}) => {
         })
         .catch( (err) =>{
             console.log(err)
+          console.log("Status:", err.response?.status);
+          console.log("Response:", err.response?.data);
+            
         })
     }
     useEffect( ()=>{
@@ -29,7 +32,7 @@ const ShowTable = ({refresh, handleUpdate}) => {
         <table border ='3'> 
             <thead>
                 <tr>
-                    <th>id</th>
+                    {/* <th>id</th> */}
                     <th>name</th>
                     <th>role</th>
                     <th>salary</th>
@@ -41,7 +44,7 @@ const ShowTable = ({refresh, handleUpdate}) => {
                   {
                 emp.map( (u)=> (
                     <tr key = {u.id}>
-                        <td>{u.id}</td>
+                        {/* <td>{u.id}</td> */}
                         <td>{u.name}</td>
                         <td>{u.role}</td>
                         <td>{u.salary}</td>

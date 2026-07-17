@@ -1,5 +1,8 @@
-from django.apps import AppConfig
+# from django.apps import AppConfig
 
 
-class EmployeesConfig(AppConfig):
-    name = 'employees'
+# class EmployeesConfig(AppConfig):
+#     name = 'employees'
+
+
+# # register the app in setting.py instead of apps.pya

@@ -23,10 +23,6 @@ const App = () => {
         <Route path='electronics' element ={<Electronics/>}/>
         <Route path='kids' element ={<Kids/>}/>
         <Route path='fashion' element ={<Fashion/>}/>
-
-
-
-
       </Routes>
       
     </div>
