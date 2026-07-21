@@ -9,6 +9,6 @@ class Task(models.Model):
     password = models.CharField(max_length=100)
     role = models.CharField(max_length=100)
     
-    
+    # database table name
     class Meta:
         db_table = "task1"

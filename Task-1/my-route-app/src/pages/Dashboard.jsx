@@ -14,7 +14,7 @@ const Dashboard = () => {
   return (
     <div>
       
-      <h2>Welcome to Dashboard...</h2>
+      <h2>Welcome to Dashboard...{localStorage.getItem("userRole")}</h2>
 
       <button onClick={handleLogout}>Logout</button>
     </div>

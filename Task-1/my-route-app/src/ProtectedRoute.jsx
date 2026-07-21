@@ -3,10 +3,10 @@ import { Navigate } from 'react-router-dom';
 
 const ProtectedRoute = ({children}) => {
 
-    const isLoggedin = localStorage.getItem("isLogin");
+    const isLoggedin = localStorage.getItem("userRole");
     console.log("isLoggedin : ", isLoggedin)
 
-    return (isLoggedin == "yes") ? children : <Navigate to="/login" />
+    return (isLoggedin == "admin" || 'user') ? children : <Navigate to="/login" />
 }
 
 export default ProtectedRoute

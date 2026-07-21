@@ -1,0 +1,16 @@
+{
+    "employee": [
+        {
+            "name":"ram",
+            "email":"ram",
+            "role":"admin",
+            "password":"123"
+        },
+        {
+            "name":"sham",
+            "email":"sham",
+            "role":"user",
+            "password":"123"
+        }
+    ]
+}
