@@ -10,10 +10,24 @@ const Dashboard = () => {
     navigate('/login')
   }
 
+  const userLog = JSON.parse(localStorage.getItem("userRole"))
+
   return (
     <div>
-      <h2>Wlecome To Dashboard : {localStorage.getItem("userRole")}</h2>
-      <br /><br />
+      <h2>Wlecome To Dashboard : </h2>  <br /><br />
+
+{/* 
+      <p>name: {location.state.user.name}</p>
+      <p>name: {location.state.user.role}</p>
+      <p>name: {location.state.user.email}</p> */}
+
+      <p>name: {userLog.name}</p>
+      <p>name: {userLog.role}</p>
+      <p>name: {userLog.email}</p>
+
+
+      <br></br>
+
       <button onClick={handleLogout}>Logout</button>
     </div>
 
