@@ -1,0 +1,15 @@
+{
+  "emp": [
+    {
+      "name": "sham",
+      "role": "python dev",
+      "id": "4Wrs4a0KVhU"
+    },
+    {
+      "name": "ram",
+      "role": "react dev",
+      "id": "a_CNu7wnVV4"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
