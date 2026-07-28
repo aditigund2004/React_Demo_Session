@@ -25,9 +25,13 @@ const App = () => {
   }, [])
 
   const handleDelete = (id)=>{
-    api.delete(`/${id}`, id)
+    api.delete(`/${id}/`, id)
     .then( (res)=>{
+      console.log(res.data)
       loadData();
+    })
+    .catch( (err) =>{
+      console.log(err)
     })
   }
 
@@ -84,6 +88,8 @@ const App = () => {
             <tr>
               <th>name</th>
               <th>role</th>
+              <th>Action</th>
+              <th>Action</th>
             </tr>
           </thead>
           <thead>

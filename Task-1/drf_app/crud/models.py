@@ -4,3 +4,9 @@ from django.db import models
 
 
 class ModelTask(models.Model):
+    name = models.CharField(max_length=100)
+    role = models.CharField(max_length=100)
+    
+    
+    class Meta:
+        db_table = 'emp'
