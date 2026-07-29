@@ -4,7 +4,7 @@ import { api } from '../services'
 const Admin = () => {
     const [data, setData] = useState([])
 
-    const [from, setForm] = useState({name : '', email: '', password: '', role: ''})
+    const [from, setForm] = useState({name : '', email: '', mobile: '', password: '', role: 'user'})
 
     const [update, setUpdate] = useState(null)
     
@@ -13,19 +13,41 @@ const Admin = () => {
 
             if(update)
             {
-                api.put(`/${update.id}`, data)
+                api.put(`/${update.id}/`, from)
                 .then( (res)=>{
+                    loadData()
                     setForm(res.data)
+                    setUpdate(null)
                 })
 
             }else{
+            // api.post(`/`, from)
+            // .then( (res)=>{
+            //     console.log(res.data)
+            //     loadData()
+            //     setForm(res.data)
+            // })
+            // .catch( (err) => {
+            //     console.log(err)
+            // })
             api.post(`/`, from)
-            .then( (res)=>{
-                console.log(res.data)
-            })
-            .catch( (err) => {
-                console.log(err)
-            })
+           .then((res) => {
+            console.log("User Added:", res.data);
+
+            loadData(); // refresh table
+
+            setForm({
+                name: '',
+                email: '',
+                mobile: '',
+                password: '',
+                role: ''
+            });
+
+        })
+        .catch((err) => {
+            console.log(err.response.data);
+        });
         }
     
         }
@@ -65,11 +87,13 @@ const Admin = () => {
   return (
     <div>
         <center>
-            <h3>Add data</h3>
+
+            <h3>Admin Page</h3>
             <form onSubmit={handleSubmit}>
 
                 name : <input type="text" name = 'name' value={from.name} onChange={handleInput} required/><br></br><br></br>
-                email : <input type="text" name = 'email' value={from.emial} onChange={handleInput} required/><br></br><br></br>
+                email : <input type="text" name = 'email' value={from.email} onChange={handleInput} required/><br></br><br></br>
+                mobile : <input type="text" name = 'mobile' value={from.mobile} onChange={handleInput} required/><br></br><br></br>
                 password : <input type="text" name = 'password' value={from.password} onChange={handleInput} required/><br></br><br></br>
                 role : <select name="role" value={from.role} onChange={handleInput}>
                     <option value="user">user</option>
@@ -77,8 +101,10 @@ const Admin = () => {
 
                 </select>
                 <br></br>
+                <br></br>
 
-                <button>Login here</button>
+
+                <button>Add</button>
 
             </form>
 
@@ -92,6 +118,8 @@ const Admin = () => {
                         <th>mobile</th>
                         <th>password</th>
                         <th>role</th>
+                        <th>Action</th>
+                        <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -107,7 +135,7 @@ const Admin = () => {
                                     <button onClick={ () => handleDelete (u.id)}>Delete</button>
                                 </td>
                                 <td>
-                                    <button onClick={ () => handleUpdate (u)}>Delete</button>
+                                    <button onClick={ () => handleUpdate (u)}>update</button>
                                 </td>
                             </tr>
                         ))}

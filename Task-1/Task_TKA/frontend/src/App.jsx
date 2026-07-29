@@ -6,9 +6,7 @@ const App = () => {
   return (
     <div>
       <center>
-        <Login/>
-
-        
+        <Login/>        
       </center>
       
     </div>
