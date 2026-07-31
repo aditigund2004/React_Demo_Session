@@ -1,0 +1,38 @@
+{
+    "bankers":[
+        {
+            "name": "ram",
+            "email": "ram",
+            "password":"123",
+            "role": "manager"
+
+        },
+        {
+            "name": "sham",
+            "email": "sham",
+            "password":"123",
+            "role": "cashier"
+
+        }
+
+    ],
+     "customers":[
+        {
+            "acc":"1122",
+            "name": "ram",
+            "email": "ram",
+            "password":"123",
+            "balance":"5000"
+
+        },
+        {
+            "acc":"2211",
+            "name": "sham",
+            "email": "sham",
+            "password":"123",
+            "balance": "5000"
+
+        }
+
+    ]
+}
