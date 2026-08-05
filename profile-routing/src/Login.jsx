@@ -5,14 +5,12 @@ const Login = () => {
 
     const [login , setLogin] =useState({email:"", password: ""})
 
+    const nav = useNavigate();
+    
     const handleInput = (e) =>{
         const{name, value} = e.target
         setLogin({...login, [name]: value})
-
     }
-
-    const nav = useNavigate();
-
 
     const handleSubmit = (e) =>{
         e.preventDefault()
