@@ -1,0 +1,12 @@
+body{
+  background-color: rgb(199, 162, 234);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(112, 68, 14);
+}
+
+button{
+  color:blue;
+  /* border: 0cqmax; */
+  border-color:brown;
+  background-color:rgb(103, 180, 182);
+}
