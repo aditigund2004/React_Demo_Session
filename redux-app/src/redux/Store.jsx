@@ -6,10 +6,3 @@ export const Store = configureStore({
     counter: counterReducer,
   },
 })
-
-
-
-
-
-
-

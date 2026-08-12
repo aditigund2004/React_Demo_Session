@@ -31,10 +31,3 @@ export default App
 // useSelector -> Used to read Redux state:
 
 // useDispatch -> Used to change Redux state:
-
-
-
-
-
-
-
