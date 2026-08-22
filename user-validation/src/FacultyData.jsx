@@ -43,6 +43,8 @@ const FacultyData = () => {
         console.log(err)
       })
 
+
+
       
     let total = Number(form.m1) + Number(form.m2) + Number(form.m3) + Number(form.m4) 
 
@@ -99,3 +101,5 @@ const FacultyData = () => {
 }
 
 export default FacultyData
+
+
